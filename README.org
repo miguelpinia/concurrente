@@ -1,0 +1,13 @@
+#+title: Tareas y prácticas de Computación Concurrente
+#+author: Miguel Piña
+#+date: [2018-02-10 sáb 21:59]
+
+
+Repositorio para las prácticas y tareas de código del curso de Computación
+Concurrente. Este repositorio se encuentra en la siguiente URL:
+https://github.com/miguelpinia/concurrente
+
+
+* Autor
+
+Miguel Angel Piña Avelino
