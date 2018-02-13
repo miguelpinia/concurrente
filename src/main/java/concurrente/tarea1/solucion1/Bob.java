@@ -30,7 +30,6 @@ public class Bob implements Runnable {
      */
     @Override
     public void run() {
-        int i = 1000;
         while (true) {
             if (_yard.getTotalFood() == 0) {
                 int totalFood = _random.nextInt(100);
