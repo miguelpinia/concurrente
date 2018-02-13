@@ -7,6 +7,44 @@ Repositorio para las prácticas y tareas de código del curso de Computación
 Concurrente. Este repositorio se encuentra en la siguiente URL:
 https://github.com/miguelpinia/concurrente
 
+* Tarea 1
+
+** Dependencias
+
+- Maven 3.3.9
+
+** Ejecución
+
+*** Solución usando exclusión mutua
+
+La primera solución de la tarea se implementa usando exclusión mutua y métodos
+sincronizados. El código de esta solución se encuentra bajo el paquete
+=concurrente.tarea1.solucion1= y esta modelado usando objetos que representan la
+fabula presentada en clase.
+
+**** Evaluación
+
+Evaluación de la primera solución que usa exclusión mutua a través de *synchronized*.
+
+#+begin_src sh
+mvn exec:java@primer-solucion
+#+end_src
+
+
+*** Solución usando interrupciones
+
+La segunda solución de la tarea se implementa usando interrupciones (wait y
+notify). El código de esta solución se encuentra bajo el paquete
+=concurrente.tarea1.solucion2= y está modelado a través de objetos que representan
+la fabula presentada en clase.
+
+**** Evaluación
+
+Evaluación de la segunda solución usando interrupciones.
+
+#+begin_src sh
+mvn exec:java@segunda-solucion
+#+end_src
 
 * Autor
 
