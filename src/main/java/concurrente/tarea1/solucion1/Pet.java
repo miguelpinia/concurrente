@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  */
 public class Pet implements Runnable {
 
-    private static final int CAPACIDAD = 1;
+    private static final int CAPACITY = 1;
     private final Yard _yard;
     private final String _name;
 
@@ -31,22 +31,17 @@ public class Pet implements Runnable {
      */
     @Override
     public void run() {
-        int i = 1000;
         while (true) {
-            int comida;
-            System.out.println(String.format("CONSUMIDOR: Entra animal %s", _name));
-            do {
-                comida = _yard.come(CAPACIDAD);
-                System.out.println(String.format("Queda %d unidades de comida", comida));
-                if (comida == 0) {
-                    System.out.println("CONSUMIDOR: No hay comida\nCONSUMIDOR: Saliendo animal \n\n\n");
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(Pet.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+            int comida = _yard.come(CAPACITY);
+            System.out.println(String.format("CONSUMIDOR: Queda %d unidades de comida", comida));
+            if (comida == 0) {
+                System.out.println("CONSUMIDOR: No hay comida\nCONSUMIDOR: Saliendo animal \n\n\n");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Pet.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } while (comida > 0);
+            }
         }
     }
 

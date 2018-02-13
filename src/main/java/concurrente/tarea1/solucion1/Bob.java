@@ -17,7 +17,7 @@ public class Bob implements Runnable {
     /**
      * Constructor que recibe el campo donde se pondrá la comida.
      *
-     * @param yard El
+     * @param yard El campo donde se pondrá la comida.
      */
     public Bob(Yard yard) {
         _random = new Random();
