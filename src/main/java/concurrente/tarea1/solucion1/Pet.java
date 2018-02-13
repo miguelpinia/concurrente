@@ -32,9 +32,9 @@ public class Pet implements Runnable {
     @Override
     public void run() {
         while (true) {
-            int comida = _yard.come(CAPACITY);
-            System.out.println(String.format("CONSUMIDOR: Queda %d unidades de comida", comida));
-            if (comida == 0) {
+            int remainingFood = _yard.eat(CAPACITY);
+            System.out.println(String.format("CONSUMIDOR: Queda %d unidades de comida", remainingFood));
+            if (remainingFood == 0) {
                 System.out.println("CONSUMIDOR: No hay comida\nCONSUMIDOR: Saliendo animal \n\n\n");
                 try {
                     Thread.sleep(3000);

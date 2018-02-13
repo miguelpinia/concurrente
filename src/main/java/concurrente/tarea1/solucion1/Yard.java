@@ -2,30 +2,30 @@ package concurrente.tarea1.solucion1;
 
 /**
  * Clase que representa el campo donde:
- * 
+ *
  * - Bob deposita comida si no hay
  * - Un animal consume comida si hay.
- * 
+ *
  * @author miguel
  */
 public class Yard {
 
     // Representa el total de comida que hay en el campo.
-    private int _totalComida;
+    private int _totalFood;
 
     /**
      * Función que permite consumir la cantidad de comida especificada.
      *
-     * @param cantidadComida La cantidad de comida a consumir.
+     * @param food La cantidad de comida a consumir.
      * @return El total de comida restante.
      */
-    public synchronized int come(int cantidadComida) {
-        if (_totalComida < cantidadComida) {
-            _totalComida = 0;
+    public synchronized int eat(int food) {
+        if (_totalFood < food) {
+            _totalFood = 0;
         } else {
-            _totalComida -= cantidadComida;        
+            _totalFood -= food;
         }
-        return _totalComida;
+        return _totalFood;
     }
 
     /**
@@ -33,8 +33,8 @@ public class Yard {
      *
      * @return EL total de comida disponible.
      */
-    public synchronized int getTotalComida() {
-        return _totalComida;
+    public synchronized int getTotalFood() {
+        return _totalFood;
     }
 
     /**
@@ -42,8 +42,8 @@ public class Yard {
      *
      * @param totalComida El nuevo total de comida.
      */
-    public synchronized void setTotalComida(int totalComida) {
-        _totalComida = totalComida;
+    public synchronized void setTotalFood(int totalComida) {
+        _totalFood = totalComida;
     }
 
 }

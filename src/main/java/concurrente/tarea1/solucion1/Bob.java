@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class Bob implements Runnable {
 
-    private static final String MENSAJE = "PRODUCTOR: Entrando\nPRODUCTOR: Poniendo %d unidades de comida\nPRODUCTOR: Saliendo\n\n\n";
+    private static final String MESSAGE = "PRODUCTOR: Entrando\nPRODUCTOR: Poniendo %d unidades de comida\nPRODUCTOR: Saliendo\n\n\n";
     private final Random _random;
     private final Yard _yard;
 
@@ -32,10 +32,10 @@ public class Bob implements Runnable {
     public void run() {
         int i = 1000;
         while (true) {
-            if (_yard.getTotalComida() == 0) {
-                int totalComida = _random.nextInt(100);
-                _yard.setTotalComida(totalComida);
-                System.out.println(String.format(MENSAJE, totalComida));
+            if (_yard.getTotalFood() == 0) {
+                int totalFood = _random.nextInt(100);
+                _yard.setTotalFood(totalFood);
+                System.out.println(String.format(MESSAGE, totalFood));
             }
         }
     }
